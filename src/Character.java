@@ -47,6 +47,7 @@ public class Character {
     }
 
     private int generateAttribute() {
+        // We should roll 3 6 sided dice
         return 18;
     }
 
