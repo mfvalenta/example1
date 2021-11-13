@@ -22,27 +22,27 @@ public class Character {
     }
 
     public int getStrength() {
-        return strength;
+        return strength + race.getStrengthModifier();
     }
 
     public int getDexterity() {
-        return dexterity;
+        return dexterity + race.getDexterityModifier();
     }
 
     public int getIntelligence() {
-        return intelligence;
+        return intelligence + race.getIntelligenceModifier();
     }
 
     public int getWisdom() {
-        return wisdom;
+        return wisdom + race.getWisdomModifier();
     }
 
     public int getConstitution() {
-        return constitution;
+        return constitution + race.getConstitutionModifier();
     }
 
     public int getCharisma() {
-        return charisma;
+        return charisma + race.getCharismaModifier();
     }
 
     public void generateAttributes() {
@@ -52,19 +52,6 @@ public class Character {
         this.wisdom = generateAttribute();
         this.constitution = generateAttribute();
         this.charisma = generateAttribute();
-        if (race.getName().equals("Elf")) {
-            this.strength += 1;
-            this.dexterity += 1;
-            this.intelligence += 1;
-            this.wisdom += 1;
-            this.constitution += 1;
-            this.charisma += 1;
-
-        } else if (race.getName().equals("Elf")) {
-            this.dexterity += 2;
-        } else if (race.getName().equals("Dwarf")) {
-            this.constitution += 2;
-        }    
     }
 
     private int generateAttribute() {

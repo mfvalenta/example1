@@ -2,9 +2,9 @@ package dnd.races;
 
 public class Race {
     public static Race[] races = new Race[] {
-        new Race("Human"),
-        new Race("Elf"),
-        new Race("Dwarf")
+        new Human(),
+        new Elf(),
+        new Dwarf()
     };
     
     private String name;
