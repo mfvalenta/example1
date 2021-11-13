@@ -4,13 +4,19 @@
 public class Character {
     private String name;
     private int strength, dexterity, intelligence, wisdom, constitution, charisma;
+    private Race race;
 
-    public Character(String name) {
+    public Character(String name, Race race) {
         this.name = name;
+        this.race = race;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Race getRace() {
+        return race;
     }
 
     public int getStrength() {
@@ -57,6 +63,9 @@ public class Character {
         StringBuffer buffer = new StringBuffer();
         buffer.append("Name: ");
         buffer.append(this.name);
+        buffer.append('\n');
+        buffer.append("Race: ");
+        buffer.append(this.race.getName());
         buffer.append('\n');
         buffer.append("Strength: ");
         buffer.append(this.strength);

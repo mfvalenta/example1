@@ -7,11 +7,6 @@ public class App {
 
     public static List<Character> characters = new ArrayList<>();
 
-    public static Race[] races = new Race[] {
-        new Race("Human"),
-        new Race("Elf"),
-        new Race("Dwarf")
-    };
 
     public static void main(String[] args) throws Exception {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
@@ -27,7 +22,17 @@ public class App {
                 break;
             }
 
-            Character c = new Character(name);
+            // Ask for a race
+            System.out.println("What is the race of  " + name + "?");
+            for (int i = 0; i < Race.races.length; i++) { 
+                Race r = Race.races[i];
+                System.out.println(i + ": " + r.getName());
+            }
+            System.out.println("Enter the index for the race of " + name);
+            String raceIndexString = input.readLine();
+            int raceIndex = Integer.parseInt(raceIndexString);
+
+            Character c = new Character(name, Race.races[raceIndex]);
             c.generateAttributes();
 
             characters.add(c);
