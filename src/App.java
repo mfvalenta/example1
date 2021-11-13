@@ -28,7 +28,7 @@ public class App {
             // System.out.println("Here is your character");
             // System.out.println(c.toString());
 
-            System.out.println("Would you like to generate a character?");
+            System.out.println("Would you like to generate another character?");
             createAnotherCharacter = input.readLine();
 
         } while (createAnotherCharacter.equalsIgnoreCase("yes"));
