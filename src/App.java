@@ -20,12 +20,13 @@ public class App {
 
             System.out.println("What is the name of your character number " + (characters.size() + 1) + "?");
             String name = input.readLine();
+            name = name.substring(0,1).toUpperCase() + name.substring(1);
             if (name.trim().length() == 0) {
                 break;
             }
 
             // Ask for a race
-            System.out.println("What is the race of  " + name + "?");
+            System.out.println("What is the race of " + name + "?");
             for (int i = 0; i < Race.races.length; i++) { 
                 Race r = Race.races[i];
                 System.out.println(i + ": " + r.getName());
