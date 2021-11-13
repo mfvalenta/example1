@@ -25,8 +25,9 @@ public class App {
             c.generateAttributes();
 
             characters.add(c);
-            // System.out.println("Here is your character");
-            // System.out.println(c.toString());
+
+            System.out.print(c.getName());
+            System.out.println(" has been added.");
 
             System.out.println("Would you like to generate another character?");
             createAnotherCharacter = input.readLine();
