@@ -48,7 +48,8 @@ public class Character {
 
     private int generateAttribute() {
         // We should roll 3 6 sided dice
-        return 18;
+        Die d = new Die(6);
+        return d.roll() + d.roll() + d.roll();
     }
 
     @Override
