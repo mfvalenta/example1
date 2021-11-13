@@ -7,6 +7,12 @@ public class App {
 
     public static List<Character> characters = new ArrayList<>();
 
+    public static Race[] races = new Race[] {
+        new Race("Human"),
+        new Race("Elf"),
+        new Race("Dwarf")
+    };
+
     public static void main(String[] args) throws Exception {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
