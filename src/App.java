@@ -3,6 +3,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import dnd.races.Race;
+
 public class App {
 
     public static List<Character> characters = new ArrayList<>();

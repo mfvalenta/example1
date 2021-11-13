@@ -1,3 +1,5 @@
+package dnd.races;
+
 public class Race {
     public static Race[] races = new Race[] {
         new Race("Human"),

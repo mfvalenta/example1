@@ -1,3 +1,5 @@
+import dnd.races.Race;
+
 /**
  * This class represents a D & D character
  */
