@@ -4,7 +4,8 @@ public class Race {
     public static Race[] races = new Race[] {
         new Human(),
         new Elf(),
-        new Dwarf()
+        new Dwarf(),
+        new Halfling()
     };
     
     private String name;
