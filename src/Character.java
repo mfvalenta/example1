@@ -50,6 +50,19 @@ public class Character {
         this.wisdom = generateAttribute();
         this.constitution = generateAttribute();
         this.charisma = generateAttribute();
+        if (race.getName().equals("Elf")) {
+            this.strength += 1;
+            this.dexterity += 1;
+            this.intelligence += 1;
+            this.wisdom += 1;
+            this.constitution += 1;
+            this.charisma += 1;
+
+        } else if (race.getName().equals("Elf")) {
+            this.dexterity += 2;
+        } else if (race.getName().equals("Dwarf")) {
+            this.constitution += 2;
+        }    
     }
 
     private int generateAttribute() {
