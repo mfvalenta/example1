@@ -16,4 +16,28 @@ public class Race {
     public String getName() {
         return name;
     }
+
+    public int getStrengthModifier() {
+        return 0;
+    }
+
+    public int getDexterityModifier() {
+        return 0;
+    }
+
+    public int getIntelligenceModifier() {
+        return 0;
+    }
+
+    public int getWisdomModifier() {
+        return 0;
+    }
+
+    public int getConstitutionModifier() {
+        return 0;
+    }
+
+    public int getCharismaModifier() {
+        return 0;
+    }
 }
