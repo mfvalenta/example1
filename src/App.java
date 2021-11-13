@@ -16,7 +16,7 @@ public class App {
         String createAnotherCharacter;
         do {
 
-            System.out.println("What is the name of your character nummber " + (characters.size() + 1) + "?");
+            System.out.println("What is the name of your character number " + (characters.size() + 1) + "?");
             String name = input.readLine();
             if (name.trim().length() == 0) {
                 break;
