@@ -37,6 +37,16 @@ public class App {
             Character c = new Character(name, Race.races[raceIndex]);
             c.generateAttributes();
 
+            while (c.allLessThan70() || c.oneLessThan6()) {
+                System.out.println("Your roll sucked. Do you want to roll again?");
+                String again = input.readLine();
+                if (again.equalsIgnoreCase("yes")) {
+                    c.generateAttributes();
+                } else {
+                    break;
+                }
+            }
+
             characters.add(c);
 
             System.out.print(c.getName());

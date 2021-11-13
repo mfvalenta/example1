@@ -99,4 +99,17 @@ public class Character {
         buffer.append('\n');
         return buffer.toString();
     }
+
+    public boolean allLessThan70() {
+        return (this.strength + this.dexterity + this.intelligence + this.wisdom + this.constitution + this.charisma < 70);
+	}
+
+	public boolean oneLessThan6() {
+        return (this.strength < 6 || 
+                this.dexterity  < 6 || 
+                this.intelligence  < 6 || 
+                this.wisdom < 6 || 
+                this.constitution < 6 || 
+                this.charisma < 6);
+	}
 }
