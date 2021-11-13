@@ -70,7 +70,17 @@ public class Character {
     private int generateAttribute() {
         // We should roll 3 6 sided dice
         Die d = new Die(6);
-        return d.roll() + d.roll() + d.roll();
+        int[] rolls = new int[4];
+        int min = 6;
+        int sum = 0;
+        for (int i = 0; i < rolls.length; i++) {
+            rolls[i] = d.roll();
+            if (rolls[i] < min) {
+                min = rolls[i];
+            }
+            sum += rolls[i];
+        }
+        return sum - min;
     }
 
     @Override
