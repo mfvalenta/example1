@@ -4,5 +4,16 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.base.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.controls.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.fxml.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.graphics.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.media.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.swing.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx.web.jar",
+        "e:\\mfv\\FRC\\javafx-sdk-17.0.1\\lib\\javafx-swt.jar"
+    ]
 }
