@@ -43,5 +43,13 @@ public class CharacterModel {
     public StringProperty getAttributeProperty(int attributeIndex) {
         return attributeProperties[attributeIndex];
     }
+
+	public void reset() {
+        nameProperty.setValue("");
+        raceProperty.setValue(Race.races[0]);
+        for (StringProperty prop : attributeProperties) {
+            prop.setValue("");
+        }
+	}
     
 }

@@ -19,7 +19,10 @@ public class App extends Application {
         listScene = new CharacterListScene(300, 500);
         characterScene = new CharacterPanelScene(300, 500);
 
-        listScene.onAdd(() -> stage.setScene(characterScene.getScene()));
+        listScene.onAdd(() -> {
+            characterScene.reset();
+            stage.setScene(characterScene.getScene());
+        });
         characterScene.onSave(c -> {
             listScene.getCharacters().add(c);
             stage.setScene(listScene.getScene());

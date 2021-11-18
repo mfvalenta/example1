@@ -84,6 +84,11 @@ public class CharacterPanelScene {
         characterPanel.getModel().getAttributeProperty(CharacterModel.CONSTITUTION).setValue(Integer.toString(c.getConstitution()));
     }
 
+    public void reset() {
+        character = null;
+        characterPanel.getModel().reset();
+    }
+
     public Scene getScene() {
         return scene;
     }
