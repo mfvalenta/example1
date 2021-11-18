@@ -1,3 +1,5 @@
+package dnd;
+
 import dnd.races.Race;
 
 /**
