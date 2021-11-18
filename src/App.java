@@ -23,8 +23,17 @@ public class App extends Application {
             characterScene.reset();
             stage.setScene(characterScene.getScene());
         });
-        characterScene.onSave(c -> {
-            listScene.getCharacters().add(c);
+        listScene.onEdit((c) -> {
+            characterScene.setCharacter(c);;
+            stage.setScene(characterScene.getScene());
+        });
+        characterScene.onSave((c, preexisting) -> {
+            if (preexisting) {
+                // We don't want to add the character but we probably need to refresh
+                listScene.refreshList();
+            } else {
+                listScene.getCharacters().add(c);
+            }
             stage.setScene(listScene.getScene());
         });
 

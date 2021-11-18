@@ -18,6 +18,8 @@ public class CharacterListPanel {
 
     private Pane pane;
 
+    ListView<Character> list;
+
     private class CharacterListCell extends ListCell<Character> {
         @Override
         protected void updateItem(Character item, boolean update) {
@@ -31,7 +33,7 @@ public class CharacterListPanel {
     }
 
 	public CharacterListPanel() {
-        ListView<Character> list = new ListView<>();
+        list = new ListView<>();
         list.setCellFactory(new Callback<ListView<Character>,ListCell<Character>>(){
             @Override
             public ListCell<Character> call(ListView<Character> arg0) {
@@ -58,5 +60,9 @@ public class CharacterListPanel {
 
     public Pane getPane() {
         return pane;
+    }
+
+    public void refreshList() {
+        list.refresh();
     }
 }

@@ -1,5 +1,6 @@
 package dnd.ui;
 
+import dnd.Character;
 import dnd.races.Race;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
@@ -50,6 +51,17 @@ public class CharacterModel {
         for (StringProperty prop : attributeProperties) {
             prop.setValue("");
         }
+	}
+
+	public void updateFor(Character c) {
+        getNameProperty().setValue(c.getName());
+        getRaceProperty().setValue(c.getRace());
+        getAttributeProperty(CharacterModel.STRENGTH).setValue(Integer.toString(c.getStrength()));
+        getAttributeProperty(CharacterModel.DEXTERITY).setValue(Integer.toString(c.getDexterity()));
+        getAttributeProperty(CharacterModel.INTELLIGENCE).setValue(Integer.toString(c.getIntelligence()));
+        getAttributeProperty(CharacterModel.WISDOM).setValue(Integer.toString(c.getWisdom()));
+        getAttributeProperty(CharacterModel.CHARISM).setValue(Integer.toString(c.getCharisma()));
+        getAttributeProperty(CharacterModel.CONSTITUTION).setValue(Integer.toString(c.getConstitution()));
 	}
     
 }

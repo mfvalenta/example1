@@ -17,9 +17,10 @@ public class CharacterPanelScene {
     private SaveListener saveListener;
 
     private Character character;
+    private boolean preexisting;
 
     public interface SaveListener {
-        public void save(Character c);
+        public void save(Character c, boolean preexisting);
     }
     
     public CharacterPanelScene(int width, int height) {
@@ -41,7 +42,10 @@ public class CharacterPanelScene {
 
     private Object handleSave(ActionEvent event) {
         if (character != null && saveListener != null) {
-            saveListener.save(character);
+            // Update the name and race to make sure they get updated
+            character.setName(characterPanel.getModel().getNameProperty().getValue());
+            character.setRace(characterPanel.getModel().getRaceProperty().getValue());
+            saveListener.save(character, preexisting);
         }
         return null;
     }
@@ -61,7 +65,12 @@ public class CharacterPanelScene {
             return null;
         }
 
-        character = new Character(name, race);
+        if (character == null) {
+            character = new Character(name, race);
+        } else {
+            character.setName(name);
+            character.setRace(race);
+        }
         character.generateAttributes();
 
         updateCharacterAttributes(character);
@@ -85,8 +94,15 @@ public class CharacterPanelScene {
     }
 
     public void reset() {
+        preexisting = false;
         character = null;
         characterPanel.getModel().reset();
+    }
+
+    public void setCharacter(Character c) {
+        preexisting = true;
+        this.character = c;
+        characterPanel.getModel().updateFor(c);
     }
 
     public Scene getScene() {
